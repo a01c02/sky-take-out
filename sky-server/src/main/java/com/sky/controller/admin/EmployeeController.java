@@ -117,7 +117,7 @@ public class EmployeeController {
      * @return
      */
     @PutMapping
-    public Result update(EmployeeDTO employeeDTO){
+    public Result update(@RequestBody EmployeeDTO employeeDTO){
         log.info("编辑员工信息：{}", employeeDTO);
         employeeService.update(employeeDTO);
         return Result.success();
